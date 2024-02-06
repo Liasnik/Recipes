@@ -23,9 +23,7 @@ export default async function RecipesPage() {
         <Link key={recipe.id} href={`./recipe/${recipe.id}`}>
           <div className="flex flex-col gap-2 items-center">
             <h2>
-              {recipe.name == "Russian Borscht"
-                ? "Ukrainian Borsch"
-                : recipe.name}
+              {recipe.name == "Russian Borscht" ? "Hriuchevo" : recipe.name}
             </h2>
             <div className="rounded-xl">
               <Image

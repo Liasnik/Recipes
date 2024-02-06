@@ -17,10 +17,8 @@ export default async function RecipePage({
               key={recipe.id}
               className="flex flex-col pt-5  gap-2 items-center"
             >
-              <h2 className="text-orange-400 text-4xl mb-12">
-                {recipe.name == "Russian Borscht"
-                  ? "Ukrainian Borsch"
-                  : recipe.name}
+              <h2 className="text-orange-400 text-4xl mb-12 px-5">
+                {recipe.name == "Russian Borscht" ? "Hriuchevo" : recipe.name}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 w-full gap-12 text-slate-200 text-2xl">
                 <div className="flex flex-col justify-center items-center p-4 shadow-blue-900">

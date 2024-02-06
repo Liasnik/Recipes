@@ -19,14 +19,16 @@ async function CartPage({ params: { id } }: { params: { id: number } }) {
           </h2>
         </div>
       </div>
-      <div className="w-2/3 pt-20 mx-auto grid grid-cols-2 lg:grid-cols-3 gap-16">
+      <div className="md:w-2/3 pt-5 md:pt-20 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         {carts[id]?.products.map((product) => (
-          <div key={product.id} className="flex flex-col gap-4">
+          <div key={product.id} className="flex flex-col gap-4 px-5">
             <Link href={`../product/${product.id}`}>
               <h2 className="text-amber-400 text-lg flex justify-center">
                 {product.title}
               </h2>
-              <h3 className="mx-auto">price: ${product.price}</h3>
+              <h3 className="mx-auto mb-2 pl-20 md:pl-0">
+                price: ${product.price}
+              </h3>
               <Image
                 src={product.thumbnail}
                 alt={product.title}

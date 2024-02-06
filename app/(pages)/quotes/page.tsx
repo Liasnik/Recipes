@@ -1,5 +1,3 @@
-import CircleProgressBar from "../../components/CircleProgressBar";
-
 interface Post {
   id: number;
   quote: string;
@@ -27,9 +25,8 @@ export default async function Quotes() {
   const { quotes } = await getQuotes();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <CircleProgressBar />
-      <section className="w-[80%] grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <main className="flex min-h-screen flex-col items-center justify-between p-5">
+      <section className="w-full lg:w-[80%] grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {quotes &&
           quotes.map((quote, index) => (
             <article

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Products } from "../(pages)/carts/page";
+import { Products } from "../types";
 
 function ProductItem(products: { products: Products[] }) {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 ">
       {products &&
         products.products.map((product) => (
           <div key={product.id} className="mb-8 mx-auto">
@@ -14,6 +14,7 @@ function ProductItem(products: { products: Products[] }) {
                 alt={product.title}
                 width={150}
                 height={150}
+                className="w-[300px] md:w-[150px]"
               />
             </div>
           </div>

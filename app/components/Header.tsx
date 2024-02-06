@@ -6,17 +6,14 @@ const Header = () => {
       <div className="mx-auto px-20">
         <nav className="flex items-center justify-between">
           <div className="text-white text-2xl font-bold">{/* Logo */}</div>
-          <ul className="flex space-x-7">
+          <ul className="flex space-x-4 md:space-x-7">
             <li>
               <Link href="/" className="hover:text-blue-300">
                 Recipes
               </Link>
             </li>
             <li>
-              <Link
-                href="/quotes"
-                className="hover:text-blue-300 active:scroll-pb-1"
-              >
+              <Link href="/quotes" className="hover:text-blue-300">
                 Quotes
               </Link>
             </li>

@@ -30,9 +30,9 @@ export default async function Home() {
   const { posts } = await getData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-5">
       <ReadingProgress />
-      <section className="w-[80%] grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="w-full lg:w-[80%] grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {posts &&
           posts.map((product, index) => (
             <article
