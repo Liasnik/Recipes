@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NavLinks from "./Nav-Links";
 
 const Header = () => {
@@ -6,9 +7,7 @@ const Header = () => {
       <div className="mx-auto px-20">
         <section className="flex items-center justify-between">
           <div className="text-white text-2xl font-bold">{/* Logo */}</div>
-          <nav className="flex space-x-4 md:space-x-7">
-            <NavLinks />
-          </nav>
+          <NavLinks />
         </section>
       </div>
     </div>

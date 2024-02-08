@@ -18,17 +18,19 @@ export default function NavLinks() {
   const pathname = usePathname();
   return (
     <>
-      {links.map((link) => (
-        <Link
-          key={link.name}
-          href={link.href}
-          className={clsx("hover:text-blue-300", {
-            " text-blue-300": pathname === link.href,
-          })}
-        >
-          <p className="hidden md:block">{link.name}</p>
-        </Link>
-      ))}
+      <nav className="flex space-x-4 md:space-x-7">
+        {links.map((link) => (
+          <Link
+            key={link.name}
+            href={link.href}
+            className={clsx("hover:text-blue-300", {
+              " text-blue-300": pathname === link.href,
+            })}
+          >
+            <p>{link.name}</p>
+          </Link>
+        ))}
+      </nav>
     </>
   );
 }
